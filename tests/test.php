@@ -35,8 +35,6 @@ class PigTest extends PHPUnit_Framework_TestCase {
             $this->assertEquals($reference, $pig->translateWord($input));
         }
     }
-
-
 }
 
 
