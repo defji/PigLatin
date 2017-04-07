@@ -3,13 +3,14 @@
     "description": "Translate words to pig/latin",
     "type": "package",
     "license": "MIT",
+    "version": "1.0.0",
     "authors": [
         {
             "name": "Györkös Balázs",
             "email": "balazs.gyorkos@gmail.com"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "stable:",
     "require": {
         "php": ">=5.3.0"
     },
