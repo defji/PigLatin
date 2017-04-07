@@ -5,10 +5,9 @@ namespace PigLatin;
 class Translator
 {
 
-    public function __construct($inputText,$useDash=FALSE)
+    public function __construct($useDash=FALSE)
     {
         $this->dash = $useDash ? '-':'';
-        $this->input = $inputText;
     }
 
     protected $consonants = [
@@ -24,18 +23,18 @@ class Translator
         '.', ',', '?', '!', ';', ':', '-'
     ];
 
-    public function translate()
+    public function translate($input)
     {
         $translated = "";
-        $words = explode(" ",$this->input);
+        $words = explode(" ",$input);
         foreach($words as $word) {
             $translated.= $this->translateWord($word)." ";
         }
-        return $translated;
+        return substr($translated,0,-1);
     }
 
 
-    private function translateWord($word)
+    public function translateWord($word)
     {
         $arr = str_split($word);
         list($first) = $arr;
@@ -64,7 +63,6 @@ class Translator
             $suffix .= $this->dash.'way';
             $translation .= $word . $suffix;
         }
-
-        return $translation.$mark;
+        return trim($translation.$mark);
     }
 }
