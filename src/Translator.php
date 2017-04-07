@@ -39,19 +39,14 @@ class Translator
         $arr = str_split($word);
         list($first) = $arr;
         list($last) = array_reverse($arr);
-
         $mark="";
         if(in_array($last,$this->marks)) {
             $mark=$last;
-            $word = substr($word,-1);
+            $word = substr($word,0,-1);
         }
-
         $counter = 0;
         $translation = "";
         $suffix = "";
-
-
-
         if(in_array($first,$this->consonants)) {
             while (in_array($arr[$counter], $this->consonants)) {
                 $suffix .= $arr[$counter];
@@ -63,6 +58,6 @@ class Translator
             $suffix .= $this->dash.'way';
             $translation .= $word . $suffix;
         }
-        return trim($translation.$mark);
+        return $translation.$mark;
     }
 }
