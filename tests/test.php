@@ -1,6 +1,6 @@
 <?php
 
-use PigLatin\Translator;
+use defji\PigLatin\Translator;
 
 class PigTest extends PHPUnit_Framework_TestCase {
 

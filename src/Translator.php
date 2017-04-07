@@ -1,6 +1,6 @@
 <?php 
 
-namespace PigLatin;
+namespace defji\PigLatin;
 
 class Translator
 {
