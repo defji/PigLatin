@@ -3,7 +3,7 @@
     "description": "Translate words to pig/latin",
     "type": "package",
     "license": "MIT",
-    "version": "1.0.0",
+    "version": "dev-master",
     "authors": [
         {
             "name": "Györkös Balázs",
