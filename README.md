@@ -16,7 +16,7 @@ composer require defji/piglatin
  echo $t->translate("All their equipment and instruments are alive.");
  // prints: All-way eir-thay equipment-way and-way instruments-way are-way alive-way.
 
- // translate slingle word
+ // translate single word
  echo $t->translateWord("question");
  // prints uestion-qay
 
